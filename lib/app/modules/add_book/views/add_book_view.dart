@@ -16,7 +16,7 @@ class AddBookView extends GetView<AddBookController> {
       ),
       body: Center(
           child: Form(
-              key: controller.formKey,
+              key: controller.formkey,
               child: Column(
                 children: [
                   TextFormField(
@@ -24,7 +24,7 @@ class AddBookView extends GetView<AddBookController> {
                     decoration: InputDecoration(hintText: "Masukan Judul"),
                     validator: (value) {
                       if (value!.length < 2) {
-                        return "Juudul Tidak Boleh Kosong ";
+                        return "Judul Tidak Boleh Kosong ";
                       }
                       return null;
                     },
@@ -64,7 +64,7 @@ class AddBookView extends GetView<AddBookController> {
                       ? CircularProgressIndicator()
                       : ElevatedButton(
                       onPressed: () {
-                        controller.Add();
+                        controller.addbook();
                       },
                       child: Text("ADD BOOK")))
                 ],
